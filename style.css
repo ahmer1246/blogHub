@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+font-family: 'Noto Sans', sans-serif;
+}
+:root{
+    --primaryColor:#FEE715FF;
+    --secondaryColor:#101820FF;
+}
+html{
+    font-size: 62.5%;
+}
+.navbar{
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: var(--primaryColor);
+padding: 1rem 6rem;
+}
+.logo a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    
+}
+.logo a h1{
+    font-family: 'Kanit', sans-serif;
+}
+.search {
+    width: 45rem;
+    display: flex;
+}
+.search input{
+    width: 100%;
+    padding: 01rem 4rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+
+}
+
+.search i{
+    position: relative;
+    left: 2.1rem;
+    top: 0.9rem;
+    font-size: 1.6rem;
+    color: black;
+}
+.buttons {
+    display: flex;
+    gap: 1.6rem;
+}
+.buttons a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: black;
+    color: var(--primaryColor);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.buttons a:hover{
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+.humburger{
+display: none;
+}
+.humburger i{
+    font-size: 2.8rem;
+    cursor: pointer;
+    color: black;
+}
+.humburger i:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* for Tablet screen size */
+
+@media only screen and (max-width:1007px){
+    html{
+        font-size: 60%;
+    }
+    .logo a {
+        font-size: 1.8em;
+    }
+    .search {
+        width: 36rem;
+        display: flex;
+    }
+    .humburger{
+    display: block;
+    }
+    .humburger i{
+        font-size: 3.5rem;
+    }
+    .navbar{
+        gap: 1.5rem;
+    }
+    .buttons{
+        position: absolute;
+        top: 5.5rem;
+        right: 0rem;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        align-items: center;
+        padding: 2rem 0rem;
+        height: 40vh;
+        opacity: 100;
+       
+    }
+    .menuShow{
+        opacity: 0;
+        
+    }
+
+    .buttons a{
+          background-color: none;
+          font-size: 1.8rem;
+    }
+}
+
+
+/* for Mobile screen size */
+
+@media only screen and (max-width:640px){
+    .humburger{
+    display: block;
+    }
+    html{
+        font-size: 54%;
+    }
+    .humburger i{
+        font-size: 3.5rem;
+    }
+    .navbar{
+        gap: 1.5rem;
+    }
+    .search {
+        width: 30rem;
+    }
+    .buttons{
+        position: absolute;
+        top: 5.5rem;
+        left: 0rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        align-items: center;
+        padding: 2rem 0rem;
+        height: 100vh;
+        opacity: 100%;
+    }
+    .menuShow{
+        opacity: 0;
+    }
+    .buttons a{
+          background-color: none;
+          font-size: 1.8rem;
+    }
+}
+
