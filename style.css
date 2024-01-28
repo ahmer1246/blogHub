@@ -242,6 +242,7 @@ display: none;
     }
     .hero-section{
         padding: 2rem 1rem;
+        
     }
     .post{
         display: flex;
@@ -249,6 +250,7 @@ display: none;
         background-color: var(--primaryColor);
         padding: 1.7rem 1.5rem;
         border-radius: 01rem;
+        margin-bottom: 3rem;
         
     }
     .right{
