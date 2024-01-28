@@ -87,6 +87,7 @@ display: none;
     background-color: var(--primaryColor);
     padding: 5rem;
     border-radius: 01rem;
+    margin-bottom: 3rem;
 }
 .right{
     width: 65%;
