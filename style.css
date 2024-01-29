@@ -2,32 +2,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Dancing Script', cursive;
-font-family: 'Noto Sans', sans-serif;
+ 
+    font-family: 'Gowun Dodum', sans-serif;
+    
+
 }
 :root{
-    --primaryColor:#FEE715FF;
+   
+    --primaryColor:#FF0060;
     --secondaryColor:#101820FF;
 }
 html{
     font-size: 62.5%;
 }
+
 .navbar{
 display: flex;
 align-items: center;
 justify-content: space-between;
 background-color: var(--primaryColor);
 padding: 1rem 6rem;
-box-shadow: 0.1rem 0.1rem 0.1rem;
+/* box-shadow: 0.1rem 0.1rem 0.1rem; */
 }
 .logo a {
     text-decoration: none;
     font-size: 2rem;
     color: black;
     
+    
 }
 .logo a h1{
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .search {
     width: 45rem;
@@ -89,7 +94,7 @@ display: none;
     padding: 5rem;
     border-radius: 01rem;
     margin-bottom: 3rem;
-    box-shadow: 0.1rem 0.2rem 0.3rem 0.1rem ;
+    box-shadow: 0.1rem 0.2rem 0.3rem 0.1rem #FFC0D9;
 }
 .right{
     width: 65%;
@@ -130,7 +135,46 @@ display: none;
 
 
 
+.foot{
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 5rem; */
+}
 
+.footlist{
+    width: 50%;
+    font-size: 1.8rem;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.socail{
+    width: 50%;
+    font-size: 1.5rem;
+    padding: 4rem;
+}
+
+.socail .footul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.7rem;
+    padding: 2rem 0rem;
+    cursor: pointer;
+}
+.footul i{
+    font-size: 3rem;
+}
+.copyright{
+    background-color: var(--primaryColor);
+    color: black;
+    align-self: baseline;
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+}
 
 
 /* for Tablet screen size */
@@ -277,5 +321,35 @@ display: none;
         height: 20rem;
     }
 
+
+    .footlist{
+        width: 50%;
+        font-size: 1.5rem;
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+    .footlist h1{
+        font-size: 2rem;
+    }
+    .socail{
+        width: 50%;
+        font-size: 1rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .socail h1{
+        font-size: 1.7rem;
+    }
+    .footul i{
+        font-size: 1.4rem;
+    }
+
+    .copyright {
+        font-size: 1.4rem;
+    }
 }
 
