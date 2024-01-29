@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+    font-family: 'Gowun Dodum', sans-serif;
+    
+
+}
+:root{
+   
+    --primaryColor:#FF0060;
+    --secondaryColor:#101820FF;
+}
+html{
+    font-size: 62.5%;
+}
+
+.navbar{
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: var(--primaryColor);
+padding: 1rem 6rem;
+/* box-shadow: 0.1rem 0.1rem 0.1rem; */
+}
+.logo a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: black;
+    
+    
+}
+.logo a h1{
+    font-family: 'Roboto', sans-serif;
+}
+.logout a{
+    background-color: black;
+     color: #FF0060;
+    text-decoration: none;
+    padding:0.8rem ;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 0.7rem;
+}
+.logout a:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:640px){
+    .navbar{
+        padding: 1rem 1rem;
+    }
+    .logo a {
+       font-size:1.4rem;
+    }
+    .logout a{
+        background-color: black;
+         color: #FF0060;
+        text-decoration: none;
+        padding:0.8rem ;
+        font-size: 1.4rem;
+        font-weight: 500;
+        border-radius: 0.7rem;
+    }
+}
+
+
+
