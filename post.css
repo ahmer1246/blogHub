@@ -172,6 +172,10 @@ font-size: 1.7rem;
 }
 .like i {
     font-size: 1.9rem;
+    cursor: pointer;
+}
+.like i:hover{
+    color: #FF0060;
 }
 
 
