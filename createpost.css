@@ -46,9 +46,144 @@ padding: 1rem 6rem;
 .logout a:hover{
     color: white;
 }
+.main{
+   
+    height: 100vh;
+    padding: 4rem;
+    
+}
+.main .heading{
+    padding-left:4rem ;
+    border-bottom: 0.2rem solid black;
+}
+.main .heading h1{
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+    color: #FF0060;
+}
+.all-content{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+
+}
+.left-content{
+    width: 50%;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+.left-content div{
+    margin: 2rem 0.2rem;
+}
+.left-content  h2{
+    font-size: 2.4rem;
+    padding-bottom: 1.2rem;
+}
+.title input{
+    width: 70%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    background-color: #d1d1d1;
+}
+.type .radioBox{
+  display: flex;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
 
 
 
+
+
+
+
+
+.right-content{
+    width: 50%;
+    padding: 2rem;
+}
+
+.right-content div{
+    margin: 2rem 0.2rem;
+}
+.right-content .category {
+    font-size: 1.3rem;
+}
+.right-content h2{
+    font-size: 2.4rem;
+    padding-bottom: 1.2rem;
+}
+.right-content .category select{
+    width: 70%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    background-color: #d1d1d1;
+}
+.status .radioBox{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.6rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+.bottom-content{
+    width: 100%;
+    padding: 2rem 0rem; 
+}
+.bottom-content h2{
+    font-size: 2.4rem;
+    padding-bottom: 1.2rem;    
+}
+.bottom-content textarea{
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: #d1d1d1;
+}
+
+
+
+
+
+.btns{
+    width: 100%;
+    padding: 2rem 5rem;
+    display: flex;
+    gap: 2rem;  
+}
+.btns button{
+    background-color: #FF0060;
+    color: black;
+    font-size: 1.6rem;
+    padding: 1rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 0.7rem;
+    cursor: pointer;
+}
+.btns button:hover{
+    background-color: black;
+    color: #FF0060;
+    transition: all 0.4sec ease-in-out ;
+}
 
 
 
@@ -71,7 +206,36 @@ padding: 1rem 6rem;
         font-weight: 500;
         border-radius: 0.7rem;
     }
+    .main{
+        padding: 2rem;
+    }
+    .main .heading h1{
+        font-size: 2.2rem;
+        padding-bottom: 1.5rem;
+        color: #FF0060;
+    }
+    .all-content{
+        padding: 1rem;
+    }
+    .title input{
+        width: 100%;
+    }
+    .left-content{
+        width: 100%;
+    }
+    .right-content{
+        width: 100%;
+     
+    }
+    .right-content .category select{
+        width: 100%;
+    }
 }
 
 
 
+@media only screen and (max-width:250px){
+ html{
+    font-size: 58%;
+ }
+}
