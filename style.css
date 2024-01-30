@@ -88,6 +88,13 @@ display: none;
 .hero-section{
     padding: 4rem;
 }
+.postHead{
+    padding: 6rem 0rem;
+    font-size: 3.5rem;
+    color: #FF0060;
+    text-transform: uppercase;
+    text-align: center;
+}
 .post{
     display: flex;
     background-color: var(--primaryColor);
@@ -223,7 +230,9 @@ display: none;
           font-size: 1.8rem;
     }
 
-
+    .postHead{
+        padding: 6rem 0rem;
+    }
     .post{
         display: flex;
         flex-direction: column;
@@ -290,8 +299,12 @@ display: none;
           font-size: 1.8rem;
     }
     .hero-section{
-        padding: 12rem 1rem;
+        padding: 6rem 1rem;
         
+    }
+    .postHead{
+        padding: 3rem 0rem;
+        font-size: 3rem;
     }
     .post{
         display: flex;
