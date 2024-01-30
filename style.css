@@ -231,7 +231,11 @@ display: none;
     }
 
     .postHead{
-        padding: 6rem 0rem;
+        
+padding: 3rem 0rem;
+ font-size: 3rem;
+            color: #FF0060;
+    
     }
     .post{
         display: flex;
@@ -283,16 +287,21 @@ display: none;
         top: 5.5rem;
         left: 0rem;
         width: 100%;
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         background-color: black;
         align-items: center;
         padding: 2rem 0rem;
         height: 100vh;
         opacity: 100%;
+    
+        
     }
     .menuShow{
         opacity: 0;
+        z-index: -1;
+        
+        
     }
     .buttons a{
           background-color: none;
@@ -300,11 +309,12 @@ display: none;
     }
     .hero-section{
         padding: 6rem 1rem;
-        
+        /* z-index: -1;    */
     }
     .postHead{
         padding: 3rem 0rem;
         font-size: 3rem;
+        color: #FF0060;
     }
     .post{
         display: flex;
