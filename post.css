@@ -243,6 +243,7 @@ font-size: 1.7rem;
     }
     .menuShow{
         opacity: 0;
+        z-index: -1;
     }
     .buttons a{
           background-color: none;
