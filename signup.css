@@ -132,5 +132,12 @@ body{
         width: 100%;
         padding: 1rem 0rem;
     }  
+    .show-password i{
+        position: absolute;
+        right: 1.5rem;
+        top: 3rem;
+        font-size: 1.3rem;
+        cursor: pointer;
+    } 
     
 }
