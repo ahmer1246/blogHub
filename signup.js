@@ -88,7 +88,7 @@ createUserWithEmailAndPassword(auth, email, password)
     // Signed up 
     const user = userCredential.user;
     window.location.href ="updateprofile.html"
-
+  alert("Successfully Signed up")
 updatePro();
 
 
