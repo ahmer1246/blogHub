@@ -2,7 +2,7 @@
 
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-  import {  getAuth, createUserWithEmailAndPassword ,signInWithPopup, GoogleAuthProvider} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+  import {  getAuth, createUserWithEmailAndPassword ,signInWithPopup, GoogleAuthProvider ,updateProfile } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
  
   const firebaseConfig = {
     apiKey: "AIzaSyAjefXczdser26PZjJA-XYrA2DetCK7hSc",
@@ -87,6 +87,12 @@ createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+    window.location.href ="updateprofile.html"
+
+updatePro();
+
+
+
     // ...
   })
   .catch((error) => {
