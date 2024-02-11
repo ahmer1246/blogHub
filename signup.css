@@ -99,6 +99,17 @@ body{
 .form div button:hover{
     color: white;
 }
+.form #signupBtnGoogle{
+    background-color: black;
+    color: #FF0060;
+    width: 20rem;
+    font-size: 1.6rem;
+    padding: 0.7rem;
+    outline: none;
+    border: none;
+    border-radius: 0.7rem;
+    cursor: pointer;
+}
 .register-link{
     font-size: 1.4rem;
     font-weight: 600;
@@ -111,7 +122,18 @@ body{
 .register-link a:hover{
     color: black;
 }
-
+.emailErr{
+    color:yellow;
+    margin-bottom:0.7rem ;
+    font-size: 1.3rem;
+    display: none;
+}
+.passErr{
+    color:yellow;
+    margin-bottom:0.7rem ;
+    font-size: 1.3rem;
+    display: none;
+}
 
 
 @media only screen and (max-width:640px){

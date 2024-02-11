@@ -35,23 +35,31 @@
                    <label for="email">Email address</label>
                    <div>
                        <input id="email" type="email" name="email" placeholder="Email" autocomplete="email">
+                       <p class="emailErr">Email is invalid</p>
                    </div>
                </div>
                <div>
                    <label for="password">Password</label>
                    <div class="show-password">
                        <input id="password" type="password" name="password" placeholder="Enter Password">
-                       <i class="fa-solid fa-eye"></i>
+                       <i class="fa-solid fa-eye" id="showPass"></i>
+                       <p class="passErr">Password  length must be 6 letters  </p>
                    </div>
                    <!-- <div class="forpass"> <a href="">Forget password</a></div> -->
                </div>
                <div class="formbtn">
-                   <button type="submit">Sign up</button>
+                   <button type="submit" id="signupBtn">Sign up</button>
                </div>
+               <div class="formbtn">
+                <button type="submit" id="signupBtnGoogle">Sign up with Google</button>
+            </div>
            </form> 
    
-           <p class="register-link">Already Register <a href="">Sign in here</a></p>
+           <p class="register-link">Already Register <a href="./login.html">Sign in here</a></p>
         </div>
        </div>
+
+
+       <script src="./signup.js" type="module"></script>
 </body>
 </html>
