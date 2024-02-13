@@ -9,8 +9,12 @@
 }
 :root{
    
-    --primaryColor:#FF0060;
-    --secondaryColor:#101820FF;
+    --primaryColor:#ffffff;
+    --secondaryColor:#eff1f8;
+    --bg-color:#f1f1f1;
+    --btn-color:#ec669f;
+    --text-color:#707070;
+    --black:#010001;
 }
 html{
     font-size: 62.5%;
@@ -22,17 +26,23 @@ align-items: center;
 justify-content: space-between;
 background-color: var(--primaryColor);
 padding: 1rem 6rem;
+position:fixed;
+width: 100%;
 /* box-shadow: 0.1rem 0.1rem 0.1rem; */
 }
 .logo a {
     text-decoration: none;
     font-size: 2rem;
-    color: black;
+    color: var(--btn-color);
     
     
 }
+body{
+    background-color: var(--bg-color);
+}
 .logo a h1{
     font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
 }
 .search {
     width: 45rem;
@@ -44,6 +54,7 @@ padding: 1rem 6rem;
     border: none;
     outline: none;
     border-radius: 0.5rem;
+    background-color: var(--bg-color);
 
 }
 
@@ -62,13 +73,13 @@ padding: 1rem 6rem;
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 600;
-    background-color: black;
+    background-color:var(--btn-color);
     color: var(--primaryColor);
     padding: 1rem;
     border-radius: 0.5rem;
 }
 .buttons a:hover{
-    color: white;
+    color: var(--black);
     transition: all 0.4s ease-in-out;
 }
 .humburger{
@@ -91,7 +102,7 @@ display: none;
 .postHead{
     padding: 6rem 0rem;
     font-size: 3.5rem;
-    color: #FF0060;
+    color:var(--btn-color);
     text-transform: uppercase;
     text-align: center;
 }
@@ -108,11 +119,15 @@ display: none;
 }
 .right a{
     text-decoration: none;
-    color: black;
+    color:var(--text-color);
 }
 .right h1 {
     font-size: 3.4rem;
     padding-bottom: 1rem;
+   
+}
+.right h1 a{
+    color: var(--black);
 }
 .right p{
     font-size: 1.7rem;
@@ -143,8 +158,8 @@ display: none;
 
 
 .foot{
-    background-color: var(--secondaryColor);
-    color: var(--primaryColor);
+    background-color: var(--black);
+    color: var(--text-color);
     display: flex;
     flex-wrap: wrap;
     /* padding: 5rem; */
@@ -156,6 +171,9 @@ display: none;
     padding: 4rem;
     display: flex;
     justify-content: center;
+}
+.footlist h1{
+    color: var(--btn-color);
 }
 .socail{
     width: 50%;
@@ -173,6 +191,10 @@ display: none;
 }
 .footul i{
     font-size: 3rem;
+    
+}
+.footul i:hover{
+    color: var(--btn-color);
 }
 .copyright{
     background-color: var(--primaryColor);
@@ -234,7 +256,7 @@ display: none;
         
 padding: 3rem 0rem;
  font-size: 3rem;
-            color: #FF0060;
+            color:var(--btn-color);
     
     }
     .post{
@@ -314,7 +336,7 @@ padding: 3rem 0rem;
     .postHead{
         padding: 3rem 0rem;
         font-size: 3rem;
-        color: #FF0060;
+        color:var(--btn-color);
     }
     .post{
         display: flex;

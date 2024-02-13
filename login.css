@@ -8,10 +8,16 @@
 
 }
 :root{
+    
    
-    --primaryColor:#FF0060;
-    --secondaryColor:#101820FF;
-}
+        --primaryColor:#ffffff;
+        --secondaryColor:#eff1f8;
+        --bg-color:#f1f1f1;
+        --btn-color:#ec669f;
+        --text-color:#707070;
+        --black:#010001;
+    }
+
 html{
     font-size: 62.5%;
 }
@@ -24,7 +30,7 @@ body{
     
 }
 .main{
-    background-color: #FF0060;
+    background-color: var(--bg-color);
     padding: 3rem;
     border-radius: 1rem;
 }
@@ -32,6 +38,7 @@ body{
  padding: 1rem;
  text-align: center;
  font-size: 4rem;
+ color: var(--btn-color);
 }
 .heading h2{
     text-align: center;
@@ -85,8 +92,8 @@ body{
     margin-bottom: 1rem;
 }
 .form div button {
-    background-color: black;
-    color: #FF0060;
+    background-color: var(--primaryColor);
+    color:var(--btn-color);
     width: 15rem;
     font-size: 1.6rem;
     padding: 0.7rem;
@@ -97,11 +104,11 @@ body{
     
 }
 .form div button:hover{
-    color: white;
+    color:var(--black);
 }
 .form #signBtnGoogle{
-    background-color: black;
-    color: #FF0060;
+    background-color: var(--btn-color);
+    color:var(--primaryColor);
     width: 20rem;
     font-size: 1.6rem;
     padding: 0.7rem;
@@ -118,6 +125,7 @@ body{
 } 
 .register-link a{
     text-decoration: none;
+    color: var(--btn-color);
 }
 .register-link a:hover{
     color: black;
@@ -138,7 +146,7 @@ body{
 
 @media only screen and (max-width:640px){
     .main{
-        background-color: #FF0060;
+        background-color: var(--bg-color);
         padding: 4rem 2rem;
         width: 100vw;
         height: 100vh;

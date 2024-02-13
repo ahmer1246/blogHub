@@ -9,25 +9,35 @@
 }
 :root{
    
-    --primaryColor:#FF0060;
-    --secondaryColor:#101820FF;
+    --primaryColor:#ffffff;
+    --secondaryColor:#eff1f8;
+    --bg-color:#f1f1f1;
+    --btn-color:#ec669f;
+    --text-color:#707070;
+    --black:#010001;
 }
 html{
     font-size: 62.5%;
 }
-
+body{
+    background-color: var(--bg-color);
+}
 .navbar{
 display: flex;
 align-items: center;
 justify-content: space-between;
 background-color: var(--primaryColor);
 padding: 1rem 6rem;
+/* position: fixed; */
+width: 100%;
+
 /* box-shadow: 0.1rem 0.1rem 0.1rem; */
 }
 .logo a {
     text-decoration: none;
     font-size: 1.6rem;
-    color: black;
+    color:var(--btn-color);
+
     
     
 }
@@ -35,8 +45,8 @@ padding: 1rem 6rem;
     font-family: 'Roboto', sans-serif;
 }
 .logout a{
-    background-color: black;
-     color: #FF0060;
+    background-color: var(--btn-color);
+     color:var(--primaryColor);
     text-decoration: none;
     padding:0.8rem ;
     font-size: 1.6rem;
@@ -44,12 +54,13 @@ padding: 1rem 6rem;
     border-radius: 0.7rem;
 }
 .logout a:hover{
-    color: white;
+    color:var(--black);
 }
 .main{
    
     height: 100vh;
     padding: 4rem;
+    
     
 }
 .main .heading{
@@ -59,7 +70,7 @@ padding: 1rem 6rem;
 .main .heading h1{
     font-size: 2.5rem;
     padding-bottom: 2rem;
-    color: #FF0060;
+    color: var(--btn-color);
 }
 .all-content{
     display: flex;
@@ -137,7 +148,12 @@ padding: 1rem 6rem;
 
 
 
-
+.image-upload{
+    padding: 1rem;
+}
+.image-upload h2{
+    padding-bottom: 1rem;
+}
 
 
 .bottom-content{
@@ -169,8 +185,8 @@ padding: 1rem 6rem;
     gap: 2rem;  
 }
 .btns button{
-    background-color: #FF0060;
-    color: black;
+    background-color: var(--btn-color);
+    color:var(--primaryColor);
     font-size: 1.6rem;
     padding: 1rem;
     font-weight: 600;
@@ -180,8 +196,8 @@ padding: 1rem 6rem;
     cursor: pointer;
 }
 .btns button:hover{
-    background-color: black;
-    color: #FF0060;
+    
+    color:var(--black);
     transition: all 0.4sec ease-in-out ;
 }
 
@@ -198,8 +214,8 @@ padding: 1rem 6rem;
        font-size:1.4rem;
     }
     .logout a{
-        background-color: black;
-         color: #FF0060;
+        background-color: var(--btn-color);
+         color:var(--primaryColor);
         text-decoration: none;
         padding:0.8rem ;
         font-size: 1.4rem;
@@ -212,7 +228,7 @@ padding: 1rem 6rem;
     .main .heading h1{
         font-size: 2.2rem;
         padding-bottom: 1.5rem;
-        color: #FF0060;
+        color:var(--btn-color);
     }
     .all-content{
         padding: 1rem;

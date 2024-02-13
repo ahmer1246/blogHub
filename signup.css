@@ -9,8 +9,12 @@
 }
 :root{
    
-    --primaryColor:#FF0060;
-    --secondaryColor:#101820FF;
+    --primaryColor:#ffffff;
+    --secondaryColor:#eff1f8;
+    --bg-color:#f1f1f1;
+    --btn-color:#ec669f;
+    --text-color:#707070;
+    --black:#010001;
 }
 html{
     font-size: 62.5%;
@@ -24,7 +28,7 @@ body{
     
 }
 .main{
-    background-color: #FF0060;
+    background-color:var(--bg-color);
     padding: 3rem;
     border-radius: 1rem;
 }
@@ -61,11 +65,11 @@ body{
     cursor: pointer;
 }
 .show-password i:hover{
-    color: #FF0060;
+    color:var(--black);
 }
 .form .forpass a{
     text-decoration: none;
-    color: blue;
+    color: var(--btn-color);
     
 }
 .form .forpass a:hover{
@@ -85,8 +89,8 @@ body{
     margin-bottom: 1rem;
 }
 .form div button {
-    background-color: black;
-    color: #FF0060;
+    background-color: var(--btn-color);
+    color: var(--primaryColor);
     width: 15rem;
     font-size: 1.6rem;
     padding: 0.7rem;
@@ -97,11 +101,11 @@ body{
     
 }
 .form div button:hover{
-    color: white;
+    color: var(--black);
 }
 .form #signupBtnGoogle{
-    background-color: black;
-    color: #FF0060;
+    background-color: var(--btn-color);
+    color: var(--primaryColor);
     width: 20rem;
     font-size: 1.6rem;
     padding: 0.7rem;
@@ -115,9 +119,11 @@ body{
     font-weight: 600;
     text-align: center;
     margin: 2rem 0rem;
+    
 } 
 .register-link a{
     text-decoration: none;
+    color: var(--btn-color);
 }
 .register-link a:hover{
     color: black;
@@ -138,7 +144,7 @@ body{
 
 @media only screen and (max-width:640px){
     .main{
-        background-color: #FF0060;
+        background-color:var(--bg-color);
         padding: 4rem 2rem;
         width: 100vw;
         height: 100vh;

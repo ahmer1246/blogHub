@@ -9,19 +9,27 @@
 }
 :root{
    
-    --primaryColor:#FF0060;
-    --secondaryColor:#101820FF;
+    --primaryColor:#ffffff;
+    --secondaryColor:#eff1f8;
+    --bg-color:#f1f1f1;
+    --btn-color:#ec669f;
+    --text-color:#707070;
+    --black:#010001;
 }
 html{
     font-size: 62.5%;
 }
-
+body{
+    background-color: var(--bg-color);
+}
 .navbar{
 display: flex;
 align-items: center;
 justify-content: space-between;
 background-color: var(--primaryColor);
 padding: 1rem 6rem;
+position: fixed;
+width: 100%;
 /* box-shadow: 0.1rem 0.1rem 0.1rem; */
 }
 .logo a {
@@ -33,6 +41,8 @@ padding: 1rem 6rem;
 }
 .logo a h1{
     font-family: 'Roboto', sans-serif;
+    color: var(--btn-color);
+    text-transform: uppercase;
 }
 
 .buttons {
@@ -43,13 +53,13 @@ padding: 1rem 6rem;
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 600;
-    background-color: black;
+    background-color: var(--btn-color);
     color: var(--primaryColor);
     padding: 1rem;
     border-radius: 0.5rem;
 }
 .buttons a:hover{
-    color: white;
+    color:var(--black);
     transition: all 0.4s ease-in-out;
 }
 .humburger{
@@ -58,10 +68,10 @@ display: none;
 .humburger i{
     font-size: 2.8rem;
     cursor: pointer;
-    color: black;
+    color:var(--btn-color);
 }
 .humburger i:hover{
-    color: white;
+    color: black;
 }
 
 .hero-section{
@@ -74,7 +84,7 @@ display: none;
     /* border: 0.2rem solid #FF0060;    */
     border-radius: 1rem; 
     padding: 3rem ;
-    background-color: #f1f1f1;
+    background-color:var(--primaryColor);
     
     
 }
@@ -84,7 +94,7 @@ display: none;
 .heading h1 {
 font-size: 4.5rem;
 margin: 3rem 0rem;
-
+color: var(--black);
 
 
 
@@ -92,6 +102,7 @@ margin: 3rem 0rem;
 .paragraph p{
     font-size: 1.6rem;
     text-align: justify;
+    color: var(--text-color);
 
 }
 .images {
@@ -132,7 +143,7 @@ margin: 3rem 0rem;
     margin-bottom: 2rem;
 }
 .reply-section button{
-    background-color: #FF0060;
+    background-color:var(--btn-color);
     color:black;
     border: none;
     outline: none;
