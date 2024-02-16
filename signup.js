@@ -5,14 +5,16 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
   import {  getAuth, createUserWithEmailAndPassword ,signInWithPopup, GoogleAuthProvider ,updateProfile } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
  
   const firebaseConfig = {
-    apiKey: "AIzaSyAjefXczdser26PZjJA-XYrA2DetCK7hSc",
-    authDomain: "hub-blog.firebaseapp.com",
-    projectId: "hub-blog",
-    storageBucket: "hub-blog.appspot.com",
-    messagingSenderId: "181808398303",
-    appId: "1:181808398303:web:074b194125ee056c11ce6a",
-    measurementId: "G-5R71RL6KKE"
+    apiKey: "AIzaSyBqmJ1Uh3wWxWRVOROKqXXyDwuqiYbwnQo",
+    authDomain: "saylani-chat-app-ahme.firebaseapp.com",
+    projectId: "saylani-chat-app-ahme",
+    storageBucket: "saylani-chat-app-ahme.appspot.com",
+    messagingSenderId: "609361310049",
+    appId: "1:609361310049:web:1ce66754d4563301595520",
+    measurementId: "G-HHP7VRJBRY"
   };
+  
+  
 
 // <<--------CLOSE------->>
 
@@ -87,7 +89,7 @@ createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-    window.location.href ="updateprofile.html"
+    window.location.href ="login.html"
   alert("Successfully Signed up")
 updatePro();
 

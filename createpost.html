@@ -24,18 +24,18 @@
         <div class="left-content">
           <div class="title">
             <h2>Title</h2>
-            <input type="text" placeholder="Enter Title" />
+            <input type="text" placeholder="Enter Title" id="title"/>
           </div>
           <div class="type">
             <h2>Select Type</h2>
             <div class="radioBox">
               <div>
-                <input type="radio" name="blog" id="blog" />
+                <input type="radio" name="type" id="blog" value="blog" />
                 <label for="blog">Blog</label>
               </div>
 
               <div>
-                <input type="radio" name="question" id="question" />
+                <input type="radio" name="type" id="question" value="question"/>
                 <label for="question">Question</label>
               </div>
             </div>
@@ -45,22 +45,22 @@
           <div class="category">
             <h2>Select Category</h2>
             <select name="category" id="category">
-              <option value="select category">Select Category</option>
+              <option value="select ">Select Category</option>
               <option value="html">HTML</option>
               <option value="css">CSS</option>
-              <option value="javascript">Javascript</option>
-              <option value="reactjs">React Js</option>
+              <option value="Javascript">Javascript</option>
+              <option value="react js">React Js</option>
             </select>
           </div>
           <div class="status">
             <h2>Select Status</h2>
             <div class="radioBox">
               <div>
-                <input type="radio" name="active" id="active" />
+                <input type="radio" name="status" id="active" value="active" />
                 <label for="active">Active</label>
               </div>
               <div>
-                <input type="radio" name="inactive" id="inactive" />
+                <input type="radio" name="status" id="inactive" value="inactive"/>
                 <label for="inactive"> In Active</label>
               </div>
             </div>
@@ -69,7 +69,7 @@
 
         <div class="image-upload">
           <h2>Upload Image</h2>
-          <input type="file"> 
+          <input type="file" id="file"> 
         </div>
         <div class="bottom-content">
           <h2>Description</h2>
@@ -82,7 +82,7 @@
         </div>
       </div>
       <div class="btns">
-        <button>Save</button>
+        <button id="save">Save</button>
         <button>Cancel</button>
       </div>
     </div>
@@ -93,5 +93,6 @@
 
 
     <script src="./createpost.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

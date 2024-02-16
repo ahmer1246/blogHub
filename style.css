@@ -98,6 +98,7 @@ display: none;
 
 .hero-section{
     padding: 4rem;
+    height: 100vh;
 }
 .postHead{
     padding: 6rem 0rem;
@@ -112,6 +113,7 @@ display: none;
     padding: 5rem;
     border-radius: 01rem;
     margin-bottom: 3rem;
+    margin-top: 4rem;
     box-shadow: 0.1rem 0.2rem 0.3rem 0.1rem #FFC0D9;
 }
 .right{
@@ -141,13 +143,13 @@ display: none;
     
 }
 .left{
-    background-image: url(./assests/images/javascript.png);
+   
     width: 35%;
     height: 25rem;
     border-radius: 0.8rem;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
 }
 
