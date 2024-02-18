@@ -98,7 +98,7 @@ display: none;
 
 .hero-section{
     padding: 4rem;
-    height: 100vh;
+   
 }
 .postHead{
     padding: 6rem 0rem;
@@ -157,7 +157,10 @@ display: none;
 
 
 
-
+footer{
+    position: static;
+    bottom: 0%;
+}
 
 .foot{
     background-color: var(--black);

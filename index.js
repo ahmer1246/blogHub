@@ -134,7 +134,7 @@ return  `
                 <h1><a href="./post.html">${blogEl.title}</a></h1>
                 <p><a href="./post.html">${blogEl.description}</a></p>
                     <div class="detail">
-                        <p>${auth.currentUser.displayName}</p>
+                        <p>${blogEl.userName}</p>
                         <p>${formattedTime}</p>
                     </div>
             </div> 

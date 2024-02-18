@@ -144,6 +144,33 @@ console.log(slectionVal)
     return; // Exit function if image upload fails
   }
 
+
+
+
+  const checkLogin2 =()=>{
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+       
+        const uid = user.uid;
+     
+      //  user = auth.currentUser;
+      console.log(auth.currentUser)
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      
+      }
+  
+      
+    });
+  }
+  
+  checkLogin2()
+  
+
+
   const id = new Date().getTime()
   const payload ={
     id:id,
@@ -153,7 +180,8 @@ console.log(slectionVal)
     statusValue:statusVal,
     description:descriptionVal,
     imageUrl:imageUrl ,
-    date:id
+    date:id,
+    userName:auth.currentUser.displayName
     
     
   
