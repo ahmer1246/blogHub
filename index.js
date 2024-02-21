@@ -108,6 +108,13 @@ checkLogin2()
 const blogHead = document.getElementById("postHead");
 
 let months = ["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Nov","Dec"]
+let maxLengh =100;
+const truncateText =(text, maxLengh)=>{
+  if (text.length <= 100) {
+    return text;
+}
+return text.slice(0, 100) + "...";
+}
 
 
 
@@ -128,11 +135,17 @@ const loadBlog =()=>{
     const formattedTime = `${day}-${month}-${years}`;
    
 
+    const truncatedDescription = truncateText(blogEl.description, 100)
+
+   
+
 return  `
 <div class="post">
             <div class="right">
-                <h1><a href="./post.html">${blogEl.title}</a></h1>
-                <p><a href="./post.html">${blogEl.description}</a></p>
+                <h1>${blogEl.title}</h1>
+             
+                <p id="description-${docs.id}">${truncatedDescription}</p>
+                 <button  class="read-more onclick="expandText('${docs.id}')">Read More</button>
                     <div class="detail">
                         <p>${blogEl.userName}</p>
                         <p>${formattedTime}</p>

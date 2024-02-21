@@ -14,7 +14,7 @@
     --bg-color:#f1f1f1;
     --btn-color:#ec669f;
     --text-color:#707070;
-    --black:#010001;
+    --black:#404040;
 }
 html{
     font-size: 62.5%;
@@ -88,13 +88,17 @@ display: none;
 .humburger i{
     font-size: 2.8rem;
     cursor: pointer;
-    color: black;
+    color:var(--black);
 }
 .humburger i:hover{
     color: white;
 }
 
-
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
 .hero-section{
     padding: 4rem;
@@ -119,21 +123,34 @@ display: none;
 .right{
     width: 65%;
 }
-.right a{
-    text-decoration: none;
+.right {
+    
     color:var(--text-color);
 }
 .right h1 {
-    font-size: 3.4rem;
+    font-size: 3rem;
     padding-bottom: 1rem;
+    color: var(--black);
    
 }
-.right h1 a{
+.right h1 {
     color: var(--black);
+    font-weight: 500;
 }
 .right p{
     font-size: 1.7rem;
     padding: 2rem;
+}
+.read-more{
+    color: blue;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background:transparent;
+    display: inline-block;
+    border: none;
+}
+.read-more:hover{
+    color: purple;
 }
 .detail{
     display: flex;
@@ -160,6 +177,7 @@ display: none;
 footer{
     position: static;
     bottom: 0%;
+    margin-top: auto;
 }
 
 .foot{
@@ -203,7 +221,7 @@ footer{
 }
 .copyright{
     background-color: var(--primaryColor);
-    color: black;
+    color:var(--black);
     align-self: baseline;
     width: 100%;
     font-size: 1.8rem;
@@ -240,7 +258,7 @@ footer{
         width: 50%;
         display: flex;
         flex-direction: column;
-        background-color: black;
+        background-color:var(--black);
         align-items: center;
         padding: 2rem 0rem;
         height: 40vh;

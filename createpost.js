@@ -192,6 +192,9 @@ console.log(slectionVal)
   try {
     await setDoc(doc(db, "Blogs", `${id}`), payload);
     console.log("Blog successfully written to Firestore.");
+    alert("Successfully upload")
+    titleVal="";
+    slectionVal="";
   } catch (error) {
     console.error("Error writing blog to Firestore:", error);
   }
