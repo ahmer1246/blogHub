@@ -140,7 +140,7 @@ const loadBlog =()=>{
    
 
 return  `
-<div class="post">
+<div class="post" id="post">
             <div class="right">
                 <h1>${blogEl.title}</h1>
              
@@ -159,10 +159,20 @@ return  `
  blogHead.innerHTML = Blogs;
 
   
+let postDiv = document.getElementById("post");
+console.log(postDiv)
+
+postDiv && postDiv.addEventListener("click",()=>{
+  console.log("hello")
+  window.location.href ="post.html"
+  
+
+})
+
+
   });
 }
 loadBlog()
-
 
 
 

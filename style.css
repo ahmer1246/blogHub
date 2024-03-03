@@ -119,6 +119,7 @@ body{
     margin-bottom: 3rem;
     margin-top: 4rem;
     box-shadow: 0.1rem 0.2rem 0.3rem 0.1rem #FFC0D9;
+    cursor: pointer;
 }
 .right{
     width: 65%;
