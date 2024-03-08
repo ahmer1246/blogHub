@@ -42,6 +42,28 @@ let saveBtn =document.getElementById("save");
 
 
 
+const checkLogin2 =()=>{
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+     
+      const uid = user.uid;
+   
+    //  user = auth.currentUser;
+    console.log(currentUser)
+    console.log(uid)
+      // ...
+    } else {
+      // User is signed out
+      // ...
+    
+    }
+
+    
+  });
+}
+
+checkLogin2()
 
 
 
@@ -147,27 +169,7 @@ console.log(slectionVal)
 
 
 
-  const checkLogin2 =()=>{
-
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-       
-        const uid = user.uid;
-     
-      //  user = auth.currentUser;
-      console.log(auth.currentUser)
-        // ...
-      } else {
-        // User is signed out
-        // ...
-      
-      }
-  
-      
-    });
-  }
-  
-  checkLogin2()
+ 
   
 
 
@@ -181,7 +183,8 @@ console.log(slectionVal)
     description:descriptionVal,
     imageUrl:imageUrl ,
     date:id,
-    userName:auth.currentUser.displayName
+    userName:auth.currentUser.displayName,
+    
     
     
   

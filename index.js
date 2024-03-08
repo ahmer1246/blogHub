@@ -17,7 +17,7 @@ humburger && humburger.addEventListener("click",()=>{
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-  import {getFirestore, collection, query, onSnapshot  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+  import {getFirestore, collection, query, onSnapshot,where ,doc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
  
   const firebaseConfig = {
@@ -31,148 +31,96 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
   };
   
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const db = getFirestore(app);
 
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+let collectData;
+let writeBtn = document.getElementById("writeBtn");
+let loginBtn = document.getElementById("loginBtn");
+let currentPage = window.location.pathname.split('/').pop();
 
-// --------GET ELEMENTS-------
+const checkLogin = (e) => {
+    e.preventDefault();
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            const uid = user.uid;
+            if (currentPage !== "createpost.html") {
+                window.location.href = "createpost.html";
+            }
+        } else {
+            window.location.href = "login.html";
+            console.log("failed");
+        }
+    });
+};
 
-  let writeBtn = document.getElementById("writeBtn");
-  let loginBtn = document.getElementById("loginBtn");
-  let currentPage = window.location.pathname.split('/').pop();
-
-
-const checkLogin =(e)=>{
-  e.preventDefault();
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-     
-      const uid = user.uid;
-      if(currentPage !== "createpost.html"){
-        window.location.href="createpost.html"
-      }
-      
-      
-      // ...
-    } else {
-      // User is signed out
-      // ...
-      window.location.href="login.html";
-      console.log("failed")
-    }
-
-    
-  });
-}
-
-writeBtn && writeBtn.addEventListener("click",checkLogin)
-
-
-// let user ;
-
-const checkLogin2 =()=>{
-
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-     
-      const uid = user.uid;
-   
-    //  user = auth.currentUser;
-    console.log(auth.currentUser)
-      // ...
-    } else {
-      // User is signed out
-      // ...
-    
-    }
-
-    
-  });
-}
-
-checkLogin2()
-
-
-
-
-
-
-
-
-
-
-
+writeBtn && writeBtn.addEventListener("click", checkLogin);
 
 const blogHead = document.getElementById("postHead");
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Nov", "Dec"];
 
-let months = ["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Nov","Dec"]
-let maxLengh =100;
-const truncateText =(text, maxLengh)=>{
-  if (text.length <= 100) {
-    return text;
+const truncateText = (text, maxLength) => {
+    if (text.length <= maxLength) {
+        return text;
+    }
+    return text.slice(0, maxLength) + "...";
 }
-return text.slice(0, 100) + "...";
-}
-
-
-
-const loadBlog =()=>{
-  const q = query(collection(db, "Blogs"), );
-  const unsubscribe = onSnapshot(q, (querySnapshot) => {
-  const Blogs = querySnapshot.docs.map( (docs)=>{
-    let blogEl = docs.data()
-    
-    let date= new Date(blogEl.date);
-   
-    let day = date.getDate();
-   
-    let month = months[date.getMonth()];
-  
-    let years = date.getFullYear();
-    
-    const formattedTime = `${day}-${month}-${years}`;
-   
-
-    const truncatedDescription = truncateText(blogEl.description, 100)
-
-   
-
-return  `
-<div class="post" id="post">
-            <div class="right">
-                <h1>${blogEl.title}</h1>
-             
-                <p id="description-${docs.id}">${truncatedDescription}</p>
-                 <button  class="read-more onclick="expandText('${docs.id}')">Read More</button>
-                    <div class="detail">
-                        <p>${blogEl.userName}</p>
-                        <p>${formattedTime}</p>
+const loadBlog = () => {
+    const q = query(collection(db, "Blogs"));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        let clickPost;
+        const Blogs = querySnapshot.docs.map((doc) => {
+            const blogEl = doc.data();
+            const date = new Date(blogEl.date);
+            const day = date.getDate();
+            const month = months[date.getMonth()];
+            const year = date.getFullYear();
+            const formattedTime = `${day}-${month}-${year}`;
+            const truncatedDescription = truncateText(blogEl.description, 100);
+            return `
+                <div class="post" data-blog-id="${blogEl.id}" id="${doc.id}">
+                    <div class="right">
+                        <h1>${blogEl.title}</h1>
+                        <p id="description-${doc.id}">${truncatedDescription}</p>
+                        <button class="read-more">Read More</button>
+                        <div class="detail">
+                            <p>${blogEl.userName}</p>
+                            <p>${formattedTime}</p>
+                        </div>
                     </div>
-            </div> 
-            <div class="left" style= "background-image: url(${blogEl.imageUrl}) "><a href=${blogEl.imageUrl}></a></div>
-        </div>`
+                    <div class="left" style="background-image: url(${blogEl.imageUrl}) "></div>
+                </div>`;
+        }).join("");
+        blogHead.innerHTML = Blogs;
 
-  } ).join("");
-
- blogHead.innerHTML = Blogs;
-
-  
-let postDiv = document.getElementById("post");
-console.log(postDiv)
-
-postDiv && postDiv.addEventListener("click",()=>{
-  console.log("hello")
-  window.location.href ="post.html"
-  
-
-})
+        // Add event listener for each post
+        document.querySelectorAll('.post').forEach((post) => {
+            post.addEventListener('click', (e) => {
+                const clickedBlogID = e.currentTarget.getAttribute('data-blog-id');
+                showDetail(clickedBlogID, querySnapshot.docs.map(doc => doc.data()));
+            });
+        });
+    });
+};
 
 
-  });
+const showDetail = (clickedBlogID) => {
+    const unsub = onSnapshot(doc(db, "Blogs", `${clickedBlogID}`), (doc) => {
+        console.log("Current data: ", doc.data());
+        // Store clicked blog data in localStorage
+        localStorage.setItem('clickedBlogData', JSON.stringify(doc.data()));
+        window.location.href = `post.html?id=${clickedBlogID.id}`;
+    });
+};
+
+const dataCollect = () => {
+    // Retrieve stored data from localStorage
+    collectData = JSON.parse(localStorage.getItem('clickedBlogData'));
+    console.log(collectData);
 }
-loadBlog()
+dataCollect();
+loadBlog();
 
 
 
@@ -180,4 +128,13 @@ loadBlog()
 
 
 
-
+let postheading = document.getElementById("post-heading");
+postheading.innerHTML=collectData.title;
+let postDescription = document.getElementById("post-decription");
+postDescription.innerHTML=collectData.description;
+let postImage = document.getElementById("post-image");
+postImage.src=collectData.imageUrl;
+let postType = document.getElementById("post-type");
+postType.innerHTML =collectData.typeValue;
+let postCategory = document.getElementById("post-category");
+postCategory.innerHTML=collectData.option
